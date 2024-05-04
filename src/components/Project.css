@@ -1,0 +1,21 @@
+.image-container {
+    position: relative;
+    overflow: hidden; /* Hide overflow content */
+  }
+  
+  .overlay {
+    opacity: 0;
+    background: #6a70ff;
+  }
+  
+  .text {
+    pointer-events: none; /* Make text non-interactive */
+  }
+  
+  .image-container:hover .overlay {
+    opacity: 1; /* Show overlay on hover */
+  }
+  
+  .image-container:hover .text {
+    opacity: 1; /* Show text on hover */
+  }
