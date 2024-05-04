@@ -2,7 +2,7 @@ import React from "react";
 
 export function Header() {
   return (
-    <header className="text-white header flex flex-row items-center content-center justify-between bg-gray-900 rounded-md backdrop-filter backdrop-blur-sm bg-opacity-20 p-[1rem] sticky top-0">
+    <header className="z-10 text-white header flex flex-row items-center content-center justify-between bg-gray-900 rounded-md backdrop-filter backdrop-blur-sm bg-opacity-20 p-[1rem] sticky top-0">
       <Logo />
       <NavButtons />
       <ButtonOne />
