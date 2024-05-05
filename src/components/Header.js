@@ -9,6 +9,7 @@ export function Header() {
     </header>
   );
 }
+
 function Logo() {
   return (
     <div className="logo-container flex items-center justify-between w-20 space-x-1">
@@ -17,9 +18,10 @@ function Logo() {
     </div>
   );
 }
+
 function NavButtons() {
   return (
-    <div className="flex flex-row items-center justify-between">
+    <div className="hidden md:flex flex-row items-center justify-between">
       <a href="#" className="mx-3">About</a>
       <a href="#" className="mx-3">Projects</a>
       <a href="#" className="mx-3">Services</a>

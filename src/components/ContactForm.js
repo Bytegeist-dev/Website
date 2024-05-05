@@ -1,6 +1,4 @@
 import React, { useState } from "react";
-import "./ContactForm.css";
-
 
 export function ContactForm() {
   const [formData, setFormData] = useState({
@@ -39,7 +37,6 @@ export function ContactForm() {
     });
   }
 
-
   function handleChange(e) {
     const { name, value } = e.target;
     setFormData((prevState) => ({
@@ -49,7 +46,7 @@ export function ContactForm() {
   }
 
   return (
-    <div>
+    <div className="mt-20">
       <div className="text-white p-10 flex flex-col space-y-3 items-center">
         <h3 className="font-bold text-3xl">
           Fuel Your Brand’s Goals with <span className="text-blue-500">Beyond</span>
@@ -59,11 +56,8 @@ export function ContactForm() {
           how we can help you fuel and grow your brand within the stated budget.
         </div>
       </div>
-      <div className="contactformcontainer flex justify-center items-center mx-auto space-x-20">
-        <form
-          onSubmit={handleSubmit}
-          className="flex flex-col min-w-lg text-2xl space-y-10"
-        >
+      <div className="contactformcontainer flex flex-col md:flex-row justify-center items-center mx-auto space-y-10 md:space-y-0 md:space-x-20">
+        <form onSubmit={handleSubmit} className="flex flex-col min-w-lg text-2xl space-y-10 md:w-[50%]">
           <input
             type="text"
             name="name"
@@ -71,7 +65,7 @@ export function ContactForm() {
             onChange={handleChange}
             required
             placeholder="Name"
-            className="bg-transparent border-b-[1px] border-white text-white" />
+            className="bg-transparent border-b-[1px] border-white text-white p-2 md:p-3" />
 
           <input
             type="tel"
@@ -80,7 +74,7 @@ export function ContactForm() {
             onChange={handleChange}
             required
             placeholder="Phone Number"
-            className="bg-transparent border-b-[1px] border-white text-white" />
+            className="bg-transparent border-b-[1px] border-white text-white p-2 md:p-3" />
 
           <input
             type="email"
@@ -89,7 +83,7 @@ export function ContactForm() {
             onChange={handleChange}
             required
             placeholder="Email"
-            className="bg-transparent border-b-[1px] border-white text-white" />
+            className="bg-transparent border-b-[1px] border-white text-white p-2 md:p-3" />
 
           <input
             type="text"
@@ -98,7 +92,7 @@ export function ContactForm() {
             onChange={handleChange}
             required
             placeholder="Budget"
-            className="bg-transparent border-b-[1px] border-white text-white" />
+            className="bg-transparent border-b-[1px] border-white text-white p-2 md:p-3" />
 
           <input
             type="text"
@@ -107,14 +101,14 @@ export function ContactForm() {
             onChange={handleChange}
             required
             placeholder="Goals"
-            className="bg-transparent border-b-[1px] border-white text-white" />
+            className="bg-transparent border-b-[1px] border-white text-white p-2 md:p-3" />
 
-          <button type="submit" onClick={handleSubmit} className="custom-button 3 bg-transparent text-white rounded-sm text-xl flex flex-row justify-center items-center h-[3rem] space-y-3">
-            Submit <span><img src="CTAButtonArrow.svg" className="w-[2.5rem]" /></span>
+          <button type="submit" onClick={handleSubmit} className="custom-button bg-transparent text-white rounded-sm text-xl flex flex-row justify-center items-center h-[3rem] space-y-3 md:w-[10rem]">
+            Submit <span><img src="CTAButtonArrow.svg" className="w-[2.5rem]" alt="Arrow" /></span>
           </button>
         </form>
         <div className="w-[15rem]">
-          <img src="contactghost.png" />
+          <img src="contactghost.png" alt="Contact Ghost" />
         </div>
       </div>
     </div>

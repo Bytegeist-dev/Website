@@ -1,17 +1,19 @@
 import React from "react";
 
 export function About() {
+  
   return (
-    <div className="text-white w-screen  p-5 mt-10 flex flex-col">
+    <div className="text-white w-screen p-5 mt-10 flex flex-col">
       <AboutMain />
       <AboutFeatures />
     </div>
   );
 }
+
 function AboutMain() {
   return (
-    <div className="flex flex-row justify-around items-center">
-      <div className="flex flex-col space-y-4 text-left max-w-[30rem]">
+    <div className="flex flex-col md:flex-row justify-around items-center">
+      <div className="flex flex-col space-y-4 text-left max-w-[30rem] md:w-[50%] md:order-2">
         <h2 className="font-commissioner font-bold text-2xl">
           Why <span className="text-blue-500">Us?</span>
         </h2>
@@ -24,30 +26,30 @@ function AboutMain() {
         </p>
       </div>
 
-      <div className="w-[20rem] mt-4">
+      <div className="w-[20rem] md:w-[30rem] mt-4 md:mt-0 md:order-1">
         <img src="whyusimage@2x.png" alt="Why Us Image" />
       </div>
     </div>
   );
 }
+
 function AboutFeatures() {
   return (
-    <div className="flex flex-col space-y-10 items-center">
+    <div className="flex flex-col md:flex-row space-y-10 md:space-y-0 md:space-x-10 items-center">
       <FeatureItemRightOne />
-      <div className="flex flex-row space-x-10">
-        <FeatureItemRightTwo />
-        <FeatureItemLeftOne />
-      </div>
+      <FeatureItemRightTwo />
+      <FeatureItemLeftOne />
     </div>
   );
 }
+
 function FeatureItemRightOne() {
   return (
-    <div className="max-w-[40rem]">
-      <h2 className="font-commissioner text-2xl font-bold text-right">
+    <div className="max-w-[40rem] text-center md:text-left">
+      <h2 className="font-commissioner text-2xl font-bold">
         Innovation.
       </h2>
-      <div className="flex item-end justify-end">
+      <div className="flex item-end justify-center md:justify-end">
         <img src="arrow-left.svg" className="w-1/3" />
       </div>
       <p>
@@ -57,13 +59,14 @@ function FeatureItemRightOne() {
     </div>
   );
 }
+
 function FeatureItemRightTwo() {
   return (
-    <div className="max-w-[40rem]">
-      <h2 className="font-commissioner text-2xl font-bold text-right">
+    <div className="max-w-[40rem] text-center md:text-left">
+      <h2 className="font-commissioner text-2xl font-bold">
         User-Centric.
       </h2>
-      <div className="flex item-end justify-end">
+      <div className="flex item-end justify-center md:justify-end">
         <img src="arrow-left.svg" className="w-1/3" />
       </div>
       <p>
@@ -73,13 +76,14 @@ function FeatureItemRightTwo() {
     </div>
   );
 }
+
 function FeatureItemLeftOne() {
   return (
-    <div className="max-w-[40rem]">
-      <h2 className="font-commissioner text-2xl font-bold text-left">
+    <div className="max-w-[40rem] text-center md:text-left">
+      <h2 className="font-commissioner text-2xl font-bold">
         Excellence.
       </h2>
-      <div className="flex item-start justify-start">
+      <div className="flex item-start justify-center md:justify-start">
         <img src="arrow-right.svg" className="w-1/3" />
       </div>
       <p>

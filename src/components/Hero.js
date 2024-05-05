@@ -25,7 +25,7 @@ function HeroHeading() {
     <div flex flex-row items-center justify-center>
       <h3 className="text-white text-2xl font-bold">
         We're
-        <span className="text-red-500 text-[10rem] font-bold font-commissioner"> BYTEGEIST</span>
+        <span className="text-red-500 lg:text-[10rem] md:text-5xl font-bold font-commissioner"> BYTEGEIST</span>
       </h3>
     </div>
   );
@@ -43,7 +43,7 @@ function HeroDescription() {
 }
 function Heroimg() {
   return (
-    <div className="absolute w-1/2 left-[19rem] top-[-4rem]">
+    <div className="absolute w-1/2 left-[19rem] top-[-4rem] lg:block hidden">
       <img src="heroimg@2x.png" className="h-[30rem]" />
     </div>
   );
